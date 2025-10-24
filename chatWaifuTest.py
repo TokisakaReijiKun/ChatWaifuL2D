@@ -15,7 +15,7 @@ from vosk import Model, KaldiRecognizer
 import json
 # from openai import OpenAI
 import openai
-openai.api_key = "sk-a81932a80715440887420efab457dc32"
+# openai.api_key = "sk-a81932a80715440887420efab457dc32"
 openai.base_url = "https://api.deepseek.com"
 
 import json
@@ -304,6 +304,7 @@ if __name__ == "__main__":
     api_key = total_data.decode()
 
     if (api_key):
+        openai.api_key = api_key
         print("收到API-key:" + api_key)
         # openai_client = OpenAI(api_key=api_key)
 
